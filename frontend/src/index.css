@@ -18,6 +18,10 @@ main {
   color: #000000 !important;
 }
 
+.btn-primary:hover {
+  background-color: #ff9000 !important;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -44,4 +48,8 @@ main {
 
 .img-large {
   max-width: 100%;
+}
+
+.img-thumbnail {
+  height: 80px !important;
 }
