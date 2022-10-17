@@ -6,17 +6,18 @@ import { Store } from '../Store';
 import CheckoutSteps from '../components/CheckoutSteps';
 
 function ShippingAddressScreen() {
+  
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
-      userInfo,
+    userInfo,
     cart: { shippingAddress },
   } = state;
   useEffect(() => {
     if (!userInfo) {
       navigate('/signin?redirect=/shipping');
     }
-  }, [userInfo,navigate]);
+  }, [userInfo, navigate]);
   const [fullname, setFullname] = useState(shippingAddress.fullname || '');
   const [address, setAddress] = useState(shippingAddress.address || '');
   const [city, setCity] = useState(shippingAddress.city || '');
@@ -40,7 +41,7 @@ function ShippingAddressScreen() {
       'shippingAddress',
       JSON.stringify({ fullname, address, city, postalCode, country })
     );
-    navigate('payment');
+    navigate('/payment');
   };
   return (
     <div>
