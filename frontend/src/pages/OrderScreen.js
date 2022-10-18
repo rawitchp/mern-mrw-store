@@ -83,21 +83,21 @@ export default function OrderScreen() {
                 <MessageBox variant="danger">Not Delivered</MessageBox>
               )}
             </Card.Body>
-            <Card className="mb-3">
-              <Card.Body>
-                <Card.Title>Payment</Card.Title>
-                <Card.Text>
-                  <strong>Method:</strong> {order.paymentMethod}
-                </Card.Text>
-                {order.isPaid ? (
-                  <MessageBox variant="success">
-                    Paid at {order.paidAt}
-                  </MessageBox>
-                ) : (
-                  <MessageBox variant="danger">Not Paid</MessageBox>
-                )}
-              </Card.Body>
-            </Card>
+          </Card>
+          <Card className="mb-3">
+            <Card.Body>
+              <Card.Title>Payment</Card.Title>
+              <Card.Text>
+                <strong>Method:</strong> {order.paymentMethod}
+              </Card.Text>
+              {order.isPaid ? (
+                <MessageBox variant="success">
+                  Paid at {order.paidAt}
+                </MessageBox>
+              ) : (
+                <MessageBox variant="danger">Not Paid</MessageBox>
+              )}
+            </Card.Body>
           </Card>
           <Card className="mb-3">
             <Card.Body>
