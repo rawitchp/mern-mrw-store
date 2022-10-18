@@ -118,7 +118,7 @@ export default function OrderScreen() {
       };
       loadPayPalScript();
     }
-  }, [order, userInfo, orderId, navigate, paypalDispatch]);
+  }, [order, userInfo, orderId, navigate, paypalDispatch, successPay]);
   return loading ? (
     <LoadingBox></LoadingBox>
   ) : error ? (
