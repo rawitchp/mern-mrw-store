@@ -6,7 +6,6 @@ import { Store } from '../Store';
 import CheckoutSteps from '../components/CheckoutSteps';
 
 function ShippingAddressScreen() {
-  
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
@@ -18,7 +17,7 @@ function ShippingAddressScreen() {
       navigate('/signin?redirect=/shipping');
     }
   }, [userInfo, navigate]);
-  const [fullname, setFullname] = useState(shippingAddress.fullname || '');
+  const [fullName, setFullName] = useState(shippingAddress.fullName || '');
   const [address, setAddress] = useState(shippingAddress.address || '');
   const [city, setCity] = useState(shippingAddress.city || '');
   const [postalCode, setPostalCode] = useState(
@@ -30,7 +29,7 @@ function ShippingAddressScreen() {
     ctxDispatch({
       type: 'SAVE_SHIPPING_ADDRESS',
       payload: {
-        fullname,
+        fullName,
         address,
         city,
         postalCode,
@@ -39,7 +38,7 @@ function ShippingAddressScreen() {
     });
     localStorage.setItem(
       'shippingAddress',
-      JSON.stringify({ fullname, address, city, postalCode, country })
+      JSON.stringify({ fullName, address, city, postalCode, country })
     );
     navigate('/payment');
   };
@@ -55,8 +54,8 @@ function ShippingAddressScreen() {
           <Form.Group className="mb-3" controlId="fullname">
             <Form.Label>Fullname</Form.Label>
             <Form.Control
-              value={fullname}
-              onChange={(e) => setFullname(e.target.value)}
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
               require
             />
           </Form.Group>
