@@ -10,7 +10,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rawitchp/mern-mrw-store.git"
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/rawitchp/mern-mrw-store/issues"
   },
-  "homepage": "https://github.com/rawitchp/mern-mrw-store#readme"
+  "homepage": "https://github.com/rawitchp/mern-mrw-store#readme",
+  "dependencies": {
+    "react-script": "^2.0.5"
+  }
 }
