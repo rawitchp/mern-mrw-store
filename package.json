@@ -4,12 +4,9 @@
   "description": "# Lessons",
   "main": "index.js",
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "build": "cd backend && npm install && cd ../frontend && npm install -f && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/rawitchp/mern-mrw-store/issues"
   },
-  "homepage": "https://github.com/rawitchp/mern-mrw-store#readme",
-  "dependencies": {
-    "react-script": "^2.0.5"
-  }
+  "homepage": "https://github.com/rawitchp/mern-mrw-store#readme"
 }
