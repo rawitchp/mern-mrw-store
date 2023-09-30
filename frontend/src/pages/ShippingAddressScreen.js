@@ -40,6 +40,7 @@ function ShippingAddressScreen() {
       'shippingAddress',
       JSON.stringify({ fullName, address, city, postalCode, country })
     );
+    console.log(localStorage.getItem('shippingAddress'));
     navigate('/payment');
   };
   return (
