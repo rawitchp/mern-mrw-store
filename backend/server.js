@@ -9,7 +9,7 @@ import orderRouter from './routes/orderRoutes.js';
 import { application } from 'express';
 
 dotenv.config();
-
+console.log(process.env.MONGODB_URI);
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
